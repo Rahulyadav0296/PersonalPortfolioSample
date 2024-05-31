@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.app {
+  height: 100vh;
+
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: lightsalmon;
+    position: relative;
+    top: 70px;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none; // for firefox
+    &::-webkit-scrollbar {
+      display: none; // display the scrolling button
+    }
+
+    > * {
+      width: 100vw;
+      height: calc(100vh - 70px);
+      scroll-snap-align: start;
+    }
+  }
+}
+
+// @mixin mobile {
+//   @media (max-width: 768px) {
+//     @content;
+//   }
+// }
